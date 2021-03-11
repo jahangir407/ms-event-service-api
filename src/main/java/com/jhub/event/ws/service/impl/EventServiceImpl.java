@@ -45,6 +45,8 @@ public class EventServiceImpl implements EventService {
 	@Override
 	public EventDto updateEvent(Long id, EventDto eventDto) {
 		return this.eventRepository.findById(id).map(x -> {
+			x.setName(eventDto.getName());
+			x.setUserId(eventDto.getUserId());
 			x.setIsActive(true);
 			return x;
 		}).map(x -> this.eventEntityToEventDtoMapper.getDestination(this.eventRepository.save(x))).get();
