@@ -107,7 +107,7 @@ class EventControllerTest {
 
 		String url = "/event";
 
-		MvcResult mvcResult = mockMvc.perform(get(url)).andExpect(status().isOk()).andDo(print()).andReturn();
+		MvcResult mvcResult = mockMvc.perform(get(url)).andExpect(status().isOk()).andReturn();
 
 		String actualResult = mvcResult.getResponse().getContentAsString();
 
@@ -143,7 +143,7 @@ class EventControllerTest {
 
 		String url = "/event/555";
 
-		MvcResult result = mockMvc.perform(get(url)).andExpect(status().isOk()).andDo(print()).andReturn();
+		MvcResult result = mockMvc.perform(get(url)).andExpect(status().isOk()).andReturn();
 
 		EventDto actualResponse = objectMapper.readValue(result.getResponse().getContentAsString(), EventDto.class);
 
@@ -189,7 +189,7 @@ class EventControllerTest {
 		MvcResult mvcResult = mockMvc
 				.perform(post(url).contentType(MediaType.APPLICATION_JSON)
 						.content(objectMapper.writeValueAsString(eventRequestBody)))
-				.andExpect(status().isOk()).andDo(print()).andReturn();
+				.andExpect(status().isOk()).andReturn();
 
 		EventDto actual = objectMapper.readValue(mvcResult.getResponse().getContentAsString(), EventDto.class);
 
@@ -267,7 +267,7 @@ class EventControllerTest {
 		MvcResult result = mockMvc
 				.perform(put(url, eventId).contentType(MediaType.APPLICATION_JSON)
 						.content(objectMapper.writeValueAsString(editedEvent)))
-				.andExpect(status().isOk()).andDo(print()).andReturn();
+				.andExpect(status().isOk()).andReturn();
 
 		EventDto actualResponse = objectMapper.readValue(result.getResponse().getContentAsString(), EventDto.class);
 
@@ -287,7 +287,7 @@ class EventControllerTest {
 		MvcResult result = mockMvc
 				.perform(
 						delete(url, eventId).contentType(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON))
-				.andDo(print()).andReturn();
+				.andReturn();
 
 		Boolean actual = objectMapper.readValue(result.getResponse().getContentAsString(), Boolean.class);
 
@@ -303,8 +303,10 @@ class EventControllerTest {
 		when(eventSerivce.hardDeleteEventById(Mockito.anyLong())).thenReturn(Boolean.TRUE);
 
 		String url = "/event/hardDelete/{id}";
+		//		MvcResult result = mockMvc.perform(delete(url, eventId)).andExpect(status().isOk()).andDo(print()).andReturn(); andDo(print())-> print to the standard console
 
-		MvcResult result = mockMvc.perform(delete(url, eventId)).andExpect(status().isOk()).andDo(print()).andReturn();
+
+		MvcResult result = mockMvc.perform(delete(url, eventId)).andExpect(status().isOk()).andReturn();
 
 		Boolean actual = objectMapper.readValue(result.getResponse().getContentAsString(), Boolean.class);
 		assertTrue(actual);

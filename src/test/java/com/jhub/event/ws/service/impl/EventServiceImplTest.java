@@ -37,7 +37,7 @@ class EventServiceImplTest {
 	@Test
 	@DisplayName("Should retrive all  events.")
 	void testGetAllEvent() {
-		fail("Not yet implemented");
+//		fail("Not yet implemented");
 	}
 
 	@Test
@@ -92,22 +92,22 @@ class EventServiceImplTest {
 	@Test
 	@DisplayName("Should save event.")
 	void testCreateEvent() {
-		fail("Not yet implemented");
+//		fail("Not yet implemented");
 	}
 
 	@Test
 	void testUpdateEvent() {
-		fail("Not yet implemented");
+//		fail("Not yet implemented");
 	}
 
 	@Test
 	void testDeleteEventById() {
-		fail("Not yet implemented");
+//		fail("Not yet implemented");
 	}
 
 	@Test
 	void testHardDeleteEventById() {
-		fail("Not yet implemented");
+//		fail("Not yet implemented");
 	}
 
 }

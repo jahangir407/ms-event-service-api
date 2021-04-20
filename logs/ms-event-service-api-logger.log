@@ -1,4 +1,89 @@
-2021-04-02 19:54:54,055 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
-2021-04-02 19:54:54,074 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringContextShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-04-02 19:54:54,087 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
-2021-04-02 19:54:54,089 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2021-04-20 17:35:48,119 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MsEventServiceApiApplication using Java 15.0.1 on LS-194 with PID 7955 (/home/jahangir/spring_project/ms-event-service-api/target/classes started by jahangir in /home/jahangir/spring_project/ms-event-service-api)
+2021-04-20 17:35:48,121 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-04-20 17:35:48,121 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.1.7.Final
+2021-04-20 17:35:48,121 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-04-20 17:35:48,154 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-20 17:35:48,154 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-20 17:35:48,866 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-20 17:35:48,895 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interfaces.
+2021-04-20 17:35:49,262 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8085 (http)
+2021-04-20 17:35:49,267 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8085"]
+2021-04-20 17:35:49,268 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-04-20 17:35:49,268 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-20 17:35:49,331 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-04-20 17:35:49,331 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1176 ms
+2021-04-20 17:35:49,366 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2021-04-20 17:35:49,567 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2021-04-20 17:35:49,571 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/eventdb'
+2021-04-20 17:35:49,730 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-20 17:35:49,810 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-04-20 17:35:50,000 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-20 17:35:50,152 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-04-20 17:35:50,584 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-20 17:35:50,589 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-20 17:35:50,608 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-04-20 17:35:50,808 INFO org.reflections.Reflections [restartedMain] Reflections took 3 ms to scan 1 urls, producing 0 keys and 0 values 
+2021-04-20 17:35:50,962 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-20 17:35:51,034 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-20 17:35:51,160 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8085"]
+2021-04-20 17:35:51,168 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8085 (http) with context path ''
+2021-04-20 17:35:51,174 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MsEventServiceApiApplication in 3.389 seconds (JVM running for 4.172)
+2021-04-20 17:36:03,851 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8085-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-20 17:36:03,852 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8085-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-04-20 17:36:03,853 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8085-exec-1] Completed initialization in 0 ms
+2021-04-20 17:36:03,865 TRACE com.jhub.event.ws.ui.controller.EventController [http-nio-8085-exec-1] A TRACE Message
+2021-04-20 17:36:03,865 DEBUG com.jhub.event.ws.ui.controller.EventController [http-nio-8085-exec-1] A DEBUG Message
+2021-04-20 17:36:03,865 INFO com.jhub.event.ws.ui.controller.EventController [http-nio-8085-exec-1] An INFO Message
+2021-04-20 17:36:03,865 WARN com.jhub.event.ws.ui.controller.EventController [http-nio-8085-exec-1] A WARN Message
+2021-04-20 17:36:03,865 ERROR com.jhub.event.ws.ui.controller.EventController [http-nio-8085-exec-1] An ERROR Message
+2021-04-20 17:36:11,939 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-20 17:36:11,939 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringContextShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-20 17:36:11,942 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2021-04-20 17:36:11,946 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2021-04-20 17:58:14,450 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.1.7.Final
+2021-04-20 17:58:14,454 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MsEventServiceApiApplication using Java 15.0.1 on LS-194 with PID 17185 (/home/jahangir/spring_project/ms-event-service-api/target/classes started by jahangir in /home/jahangir/spring_project/ms-event-service-api)
+2021-04-20 17:58:14,454 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-04-20 17:58:14,455 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-04-20 17:58:14,479 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-20 17:58:14,479 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-20 17:58:14,792 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-20 17:58:14,816 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 19 ms. Found 1 JPA repository interfaces.
+2021-04-20 17:58:15,090 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8085 (http)
+2021-04-20 17:58:15,095 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8085"]
+2021-04-20 17:58:15,095 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-04-20 17:58:15,095 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-20 17:58:15,128 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-04-20 17:58:15,128 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 649 ms
+2021-04-20 17:58:15,152 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2021-04-20 17:58:15,311 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2021-04-20 17:58:15,315 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/eventdb'
+2021-04-20 17:58:15,370 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-20 17:58:15,394 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-04-20 17:58:15,467 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-20 17:58:15,529 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-04-20 17:58:15,865 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-20 17:58:15,869 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-20 17:58:15,889 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-04-20 17:58:16,067 INFO org.reflections.Reflections [restartedMain] Reflections took 3 ms to scan 1 urls, producing 0 keys and 0 values 
+2021-04-20 17:58:16,190 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-20 17:58:16,249 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-20 17:58:16,366 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8085"]
+2021-04-20 17:58:16,376 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8085 (http) with context path ''
+2021-04-20 17:58:16,382 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MsEventServiceApiApplication in 2.17 seconds (JVM running for 2.623)
+2021-04-20 17:59:09,882 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8085-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-20 17:59:09,882 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8085-exec-2] Initializing Servlet 'dispatcherServlet'
+2021-04-20 17:59:09,883 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8085-exec-2] Completed initialization in 1 ms
+2021-04-20 17:59:09,895 TRACE com.jhub.event.ws.ui.controller.EventController [http-nio-8085-exec-2] A TRACE Message
+2021-04-20 17:59:09,895 DEBUG com.jhub.event.ws.ui.controller.EventController [http-nio-8085-exec-2] A DEBUG Message
+2021-04-20 17:59:09,895 INFO com.jhub.event.ws.ui.controller.EventController [http-nio-8085-exec-2] An INFO Message
+2021-04-20 17:59:09,895 WARN com.jhub.event.ws.ui.controller.EventController [http-nio-8085-exec-2] A WARN Message
+2021-04-20 17:59:09,895 ERROR com.jhub.event.ws.ui.controller.EventController [http-nio-8085-exec-2] An ERROR Message
+2021-04-20 17:59:27,417 TRACE com.jhub.event.ws.ui.controller.EventController [http-nio-8085-exec-4] A TRACE Message
+2021-04-20 17:59:27,417 DEBUG com.jhub.event.ws.ui.controller.EventController [http-nio-8085-exec-4] A DEBUG Message
+2021-04-20 17:59:27,417 INFO com.jhub.event.ws.ui.controller.EventController [http-nio-8085-exec-4] An INFO Message
+2021-04-20 17:59:27,417 WARN com.jhub.event.ws.ui.controller.EventController [http-nio-8085-exec-4] A WARN Message
+2021-04-20 17:59:27,417 ERROR com.jhub.event.ws.ui.controller.EventController [http-nio-8085-exec-4] An ERROR Message
+2021-04-20 18:00:27,508 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-20 18:00:27,509 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringContextShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-20 18:00:27,514 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2021-04-20 18:00:27,526 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.

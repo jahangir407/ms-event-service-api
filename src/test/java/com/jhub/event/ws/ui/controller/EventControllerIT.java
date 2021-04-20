@@ -56,7 +56,9 @@ class EventControllerIT {
 	@Order(3)
 	void getAllEvent() throws Exception {
 		String url = "/event";
-		MvcResult result = mockMvc.perform(get(url)).andExpect(status().isOk()).andDo(print()).andReturn();
+		MvcResult result = mockMvc.perform(get(url)).andExpect(status().isOk()).andReturn();
+		//MvcResult result = mockMvc.perform(get(url)).andExpect(status().isOk()).andDo(print()).andReturn(); andDo(print())-> print to the standard console
+
 		List<EventDto> actualResponse = Arrays
 				.asList(objectMapper.readValue(result.getResponse().getContentAsString(), EventDto[].class));
 
@@ -74,7 +76,7 @@ class EventControllerIT {
 		String url = "/event/{id}";
 
 		MvcResult result = mockMvc.perform(get(url, eventId).accept(MediaType.APPLICATION_JSON))
-				.andExpect(status().isOk()).andDo(print()).andReturn();
+				.andExpect(status().isOk()).andReturn();
 
 		EventDto actual = objectMapper.readValue(result.getResponse().getContentAsString(), EventDto.class);
 		EventDto expected = eventService.getEventById(actual.getId());
@@ -101,7 +103,7 @@ class EventControllerIT {
 		MvcResult mvcResult = mockMvc
 				.perform(post(url).contentType(MediaType.APPLICATION_JSON)
 						.content(objectMapper.writeValueAsString(eventRequestBody)))
-				.andExpect(status().isOk()).andDo(print()).andReturn();
+				.andExpect(status().isOk()).andReturn();
 
 		EventDto actual = objectMapper.readValue(mvcResult.getResponse().getContentAsString(), EventDto.class);
 
@@ -130,7 +132,7 @@ class EventControllerIT {
 		MvcResult result = mockMvc
 				.perform(put(url, eventId).contentType(MediaType.APPLICATION_JSON)
 						.content(objectMapper.writeValueAsString(eventRequestBody)).accept(MediaType.APPLICATION_JSON))
-				.andExpect(status().isOk()).andDo(print()).andReturn();
+				.andExpect(status().isOk()).andReturn();
 
 		EventDto actual = objectMapper.readValue(result.getResponse().getContentAsString(), EventDto.class);
 
@@ -147,7 +149,7 @@ class EventControllerIT {
 
 		String url = "/event/{id}";
 
-		MvcResult result = mockMvc.perform(delete(url, eventId)).andExpect(status().isOk()).andDo(print()).andReturn();
+		MvcResult result = mockMvc.perform(delete(url, eventId)).andExpect(status().isOk()).andReturn();
 
 		Boolean actual = objectMapper.readValue(result.getResponse().getContentAsString(), Boolean.class);
 
@@ -164,7 +166,7 @@ class EventControllerIT {
 
 		String url = "/event/hardDelete/{id}";
 
-		MvcResult result = mockMvc.perform(delete(url, eventId)).andExpect(status().isOk()).andDo(print()).andReturn();
+		MvcResult result = mockMvc.perform(delete(url, eventId)).andExpect(status().isOk()).andReturn();
 
 		Boolean actual = objectMapper.readValue(result.getResponse().getContentAsString(), Boolean.class);
 
