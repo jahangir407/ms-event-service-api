@@ -1,13 +1,16 @@
 FROM maven:3.6.3-jdk-11-slim AS MAVEN_BUILD
 #FROM maven:3.5.2-jdk-8-alpine AS MAVEN_BUILD FOR JAVA 8
 
-ARG SPRING_ACTIVE_PROFILE
-
-COPY pom.xml /build/
-COPY src /build/src/
 WORKDIR /build/
 
-RUN mvn clean install -Dspring.profiles.active=$SPRING_ACTIVE_PROFILE && mvn package -B -e -Dspring.profiles.active=$SPRING_ACTIVE_PROFILE
+#ARG SPRING_ACTIVE_PROFILE
+
+COPY pom.xml .
+COPY src src
+
+RUN mvn clean install -Dspring.profiles.active=dev&& mvn package -B -e -Dspring.profiles.active=dev
+RUN mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)
+
 #RUN mvn clean install -Dspring.profiles.active=dev && mvn package -B -e -Dspring.profiles.active=dev
 
 #RUN mvn clean && mvn package 
