@@ -36,39 +36,40 @@ public class EventController {
 
 	@GetMapping
 	List<EventDto> getAllEvent() {
-		log.trace("A TRACE Message");
-		log.debug("A DEBUG Message");
-		log.info("An INFO Message");
-		log.warn("A WARN Message");
-		log.error("An ERROR Message");
+		log.info("ARetriving all events....");
 
 		return this.eventService.getAllEvent();
 	}
 
 	@GetMapping(path = "/{id}")
 	EventDto getEventById(@PathVariable("id") Long id) {
+		log.info("Looking for event with ID: "+ id);
 		return this.eventService.getEventById(id);
 	}
 
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	ResponseEntity<EventDto> createEvent(@Valid @RequestBody EventDto eventDto) {
 		EventDto savedEvent = this.eventService.createEvent(eventDto);
+		log.info("Creating event: "+ savedEvent.toString());
 		return ResponseEntity.ok().body(savedEvent);
 	}
 
 	@PutMapping(path = "/{id}")
 	EventDto updateEvent(@PathVariable("id") Long id, @RequestBody EventDto eventDto) {
+		log.info("Creating event: "+ eventDto.toString());
 		return this.eventService.updateEvent(id, eventDto);
 
 	}
 
 	@DeleteMapping(path = "/{id}")
 	Boolean deleteEventById(@PathVariable("id") Long id) {
+		log.info("Soft deleting event with ID: "+ id);
 		return this.eventService.deleteEventById(id);
 	}
 
 	@DeleteMapping(path = "/hardDelete/{id}")
 	Boolean hardDeleteEventById(@PathVariable("id") Long id) {
+		log.info("Hard deleting event with ID: "+ id);
 		return this.eventService.hardDeleteEventById(id);
 	}
 
